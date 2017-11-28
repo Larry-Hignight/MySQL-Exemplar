@@ -24,8 +24,8 @@ The Docker image provided in this exemplar is based on the official [MySQL Serve
 
 #### Connecting with the _mysql_ client
 
-* sudo docker exec -it <container-name> bash  # Alternatively... 
-* sudo docker exec -it <container-name> mysql -u root -p
+* sudo docker exec -it \<container-name\> bash  # Alternatively... 
+* sudo docker exec -it \<container-name\> mysql -u root -p
 
 
 ### MySQL Clients / Connections
