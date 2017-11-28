@@ -16,7 +16,7 @@ CREATE TABLE IF NOT EXISTS train (
   Embarked CHAR
 );
 
-LOAD DATA INFILE '/var/lib/mysql-files/train.csv'
+LOAD DATA INFILE '/var/lib/mysql-files/titanic-train.csv'
 INTO TABLE train
 FIELDS TERMINATED BY ',' ENCLOSED BY '"'
 LINES TERMINATED BY '\r\n'
