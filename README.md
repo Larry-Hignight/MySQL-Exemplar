@@ -1,6 +1,6 @@
-# MySQL-Exemplar
+## MySQL-Exemplar
 
-## Databases
+### Databases
 
 The base image contains the following preconfigured databases:
 
@@ -11,17 +11,19 @@ The base image contains the following preconfigured databases:
 * TODO - 538 NBA Predictions for the 2017-18 season
  
 
-### Building and Running the MySQL Databases
+#### Building and Running the MySQL Databases
 
 * sudo docker build --rm -t db-exemplar .
 * sudo docker run --rm -e MYSQL_ROOT_PASSWORD=12345678 -d db-exemplar
+* sudo docker ps             # Note the name of the running container
 
 
-### Connecting with the _mysql_ client
+#### Connecting with the _mysql_ client
+
 * sudo docker exec -it <container-name> bash  # Alternatively... 
 * sudo docker exec -it <container-name> mysql -u root -p
 
 
-## MySQL Clients / Connections
+### MySQL Clients / Connections
 
 * Python - Under construction
