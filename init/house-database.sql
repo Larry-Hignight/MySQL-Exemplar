@@ -1,7 +1,7 @@
-create database titanic_dataset;
-use titanic_dataset;
+create database housing_dataset;
+use housing_dataset;
 
-CREATE TABLE IF NOT EXISTS house (
+CREATE TABLE IF NOT EXISTS house_sales (
   id INT PRIMARY KEY,
   date VARCHAR(20),
   price INT,
@@ -13,7 +13,7 @@ CREATE TABLE IF NOT EXISTS house (
 );
 
 LOAD DATA INFILE '/var/lib/mysql-files/house-data.csv'
-INTO TABLE house
+INTO TABLE house_sales
 FIELDS TERMINATED BY ',' ENCLOSED BY '"'
 LINES TERMINATED BY '\r\n'
 IGNORE 1 LINES;
