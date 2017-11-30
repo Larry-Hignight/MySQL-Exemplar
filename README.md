@@ -6,10 +6,17 @@ The base image contains the following preconfigured databases:
 
 * [Kaggle Titanic training data](https://www.kaggle.com/c/titanic/data) (including a character only version of the data)
 * [Kaggle House Sales in King County training data](https://www.kaggle.com/harlfoxem/housesalesprediction)
+
+Scripts to manually populate a database using a SQL script:
+
 * [538 NBA Predictions for the 2017-18 season](https://projects.fivethirtyeight.com/2018-nba-predictions)
-- Loaded using 'sudo docker exec -it db bash' then 'cd /var/lib/mysql-files' then 'mysql nba_2017 -u root -p < load-nba-predictions.sql'
-* TODO - Company database from the Fundamentals of Database Systems textbook
-* TODO - Library database from the Fundamentals of Database Systems textbook
+  * sudo docker exec -it db bash
+  * cd /var/lib/mysql-files
+  * mysql nba_2017 -u root -p < load-nba-predictions.sql
+
+And two _to be completed somtime in the future_ databases
+* Company database from the Fundamentals of Database Systems textbook
+* Library database from the Fundamentals of Database Systems textbook
 
 Initialization scripts and general information about each database can be found in the init directory.
 
@@ -32,3 +39,15 @@ The Docker image provided in this exemplar is based on the official [MySQL Serve
 ### MySQL Clients / Connections
 
 * Python - Under construction
+
+### Useful Links
+
+* MySQL Related
+  * [MySQL 5.7 Reference Manual](https://dev.mysql.com/doc/refman/5.7/en/)
+  * [SQL Syntax](https://dev.mysql.com/doc/refman/5.7/en/sql-syntax.html)
+  * [Executing SQL commands from a text file](https://dev.mysql.com/doc/refman/5.7/en/mysql-batch-commands.html)
+* Docker Related
+  * [MySQL Server Docker Image](https://hub.docker.com/r/mysql/mysql-server/)
+* Python Related
+  * [Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
+  * [Records - SQL for Humans](https://github.com/kennethreitz/records)
