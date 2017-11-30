@@ -6,9 +6,10 @@ The base image contains the following preconfigured databases:
 
 * [Kaggle Titanic training data](https://www.kaggle.com/c/titanic/data) (including a character only version of the data)
 * [Kaggle House Sales in King County training data](https://www.kaggle.com/harlfoxem/housesalesprediction)
+* [538 NBA Predictions for the 2017-18 season](https://projects.fivethirtyeight.com/2018-nba-predictions)
+- Loaded using 'sudo docker exec -it db bash' then 'cd /var/lib/mysql-files' then 'mysql nba_2017 -u root -p < load-nba-predictions.sql'
 * TODO - Company database from the Fundamentals of Database Systems textbook
 * TODO - Library database from the Fundamentals of Database Systems textbook
-* TODO - 538 NBA Predictions for the 2017-18 season
 
 Initialization scripts and general information about each database can be found in the init directory.
 
@@ -24,7 +25,7 @@ The Docker image provided in this exemplar is based on the official [MySQL Serve
 
 #### Connecting with the _mysql_ client
 
-* sudo docker exec -it \<container-name\> bash  # Alternatively... 
+* sudo docker exec -it \<container-name\> bash  # Alternatively...
 * sudo docker exec -it \<container-name\> mysql -u root -p
 
 
