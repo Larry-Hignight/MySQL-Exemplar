@@ -3,6 +3,6 @@ services:
   app:
     image: db-python
   db:
-    image: db-exemplar    
+    image: db-exemplar
     ports:
       - "3306:3306"
