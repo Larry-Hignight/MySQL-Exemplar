@@ -2,33 +2,41 @@ create database housing_data;
 use housing_data;
 
 CREATE TABLE IF NOT EXISTS home_sales (
-  id INT PRIMARY KEY,
+  id VARCHAR(15) PRIMARY KEY,
   sale_date VARCHAR(20),
   price INT,
   bedrooms INT,
   bathrooms FLOAT,
   sqft_living INT,
   sqft_lot INT,
-  floors FLOAT
+  floors VARCHAR(5),
   has_waterfront INT,
   has_view INT,
-  condition INT,
+  pcondition INT,
   grade INT,
   sqft_above INT,
   sqft_basement INT,
   yr_built INT,
   yr_renovated INT,
-  zipcode INT,
-  lat DOUBLE,
-  long DOUBLE,
+  zipcode VARCHAR(10),
+  latitude DOUBLE,
+  longitude DOUBLE,
   sqft_living15 INT,
-  sqft_lot15 INT,
+  sqft_lot15 INT
 );
 
-LOAD DATA INFILE '/var/lib/mysql-files/house-data.csv'
-INTO TABLE home_sales
-FIELDS TERMINATED BY ',' ENCLOSED BY '"'
-LINES TERMINATED BY '\r\n'
-IGNORE 1 LINES;
+--LOAD DATA INFILE '/var/lib/mysql-files/house-data.csv'
+--INTO TABLE home_sales
+--FIELDS TERMINATED BY ',' ENCLOSED BY '"'
+--LINES TERMINATED BY '\r\n'
+--IGNORE 1 LINES;
 
-
+insert into home_sales values (
+  ("7129300520","20141013T000000",221900,3,1,1180,5650,"1",0,0,3,7,1180,0,1955,0,"98178",47.5112,-122.257,1340,5650)
+  ("6414100192","20141209T000000",538000,3,2.25,2570,7242,"2",0,0,3,7,2170,400,1951,1991,"98125",47.721,-122.319,1690,7639)
+  ("5631500400","20150225T000000",180000,2,1,770,10000,"1",0,0,3,6,770,0,1933,0,"98028",47.7379,-122.233,2720,8062)
+  ("2487200875","20141209T000000",604000,4,3,1960,5000,"1",0,0,5,7,1050,910,1965,0,"98136",47.5208,-122.393,1360,5000)
+  ("1954400510","20150218T000000",510000,3,2,1680,8080,"1",0,0,3,8,1680,0,1987,0,"98074",47.6168,-122.045,1800,7503)
+  ("1321400060","20140627T000000",257500,3,2.25,1715,6819,"2",0,0,3,7,1715,0,1995,0,"98003",47.3097,-122.327,2238,6819)
+  ("2008000270","20150115T000000",291850,3,1.5,1060,9711,"1",0,0,3,7,1060,0,1963,0,"98198",47.4095,-122.315,1650,9711)
+);
