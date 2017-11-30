@@ -5,7 +5,7 @@ CREATE TABLE IF NOT EXISTS game_results (
   game_date DATE,
   abbv1 VARCHAR(20),
   visitor VARCHAR(20),
-  points1 VARCHAR(20),     -- This is the point spread and isn't populated
+  points1 VARCHAR(20),     -- The point spread is only populated for 1 team in each game
   win_prob1 FLOAT,
   score1 INT,
   abbv2 VARCHAR(20),
