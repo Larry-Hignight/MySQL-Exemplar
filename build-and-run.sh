@@ -2,7 +2,8 @@ echo "Building the database image"
 sudo docker build --rm -t db-exemplar .
 
 echo "Starting the database"
-sudo docker run --rm -e MYSQL_ROOT_PASSWORD=12345678 --name db -d db-exemplar
+sudo docker run --rm --name db -d db-exemplar
+#sudo docker run --rm -e MYSQL_ROOT_PASSWORD=12345678 --name db -d db-exemplar
 
 echo "Pausing to allow the database to finish starting up"
 sleep 10
